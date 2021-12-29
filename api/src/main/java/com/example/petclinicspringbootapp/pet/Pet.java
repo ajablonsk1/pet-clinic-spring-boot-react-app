@@ -4,6 +4,8 @@ import com.example.petclinicspringbootapp.appointment.Appointment;
 import com.example.petclinicspringbootapp.customer.Customer;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.NonNullApi;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -56,8 +58,8 @@ public class Pet {
         return owner;
     }
 
-    public void setOwner(Customer client) {
-        this.owner = client;
+    public void setOwner(Customer owner) {
+        this.owner = owner;
     }
 
     public String getImagePath() {

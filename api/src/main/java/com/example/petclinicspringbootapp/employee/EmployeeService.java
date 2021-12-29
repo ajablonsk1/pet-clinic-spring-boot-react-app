@@ -20,6 +20,7 @@ public class EmployeeService {
     }
 
     public List<Employee> getEmployees(){
+        log.info("Fetching all employees");
         return employeeRepo.findAll();
     }
 }

@@ -24,7 +24,7 @@ public class Customer {
 
     private String email;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "customer")
     private List<Appointment> appointments = new ArrayList<>();
 
     @OneToMany(mappedBy = "owner")

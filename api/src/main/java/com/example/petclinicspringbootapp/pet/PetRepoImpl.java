@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class PetRepoImpl implements PetRepoCustom {
+public class PetRepoImpl implements PetCustomRepo {
     private final EntityManager entityManager;
 
     @Autowired

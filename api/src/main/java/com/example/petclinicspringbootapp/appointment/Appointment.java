@@ -26,7 +26,7 @@ public class Appointment {
 
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
-    private Customer client;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "pet_id", referencedColumnName = "id")
@@ -56,12 +56,12 @@ public class Appointment {
         this.employee = employee;
     }
 
-    public Customer getClient() {
-        return client;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setClient(Customer client) {
-        this.client = client;
+    public void setCustomer(Customer client) {
+        this.customer = client;
     }
 
     public Pet getPet() {
