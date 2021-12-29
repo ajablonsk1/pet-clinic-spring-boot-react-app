@@ -2,6 +2,7 @@ package com.example.petclinicspringbootapp.pet;
 
 import com.example.petclinicspringbootapp.appointment.Appointment;
 import com.example.petclinicspringbootapp.customer.Customer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
@@ -21,10 +22,12 @@ public class Pet {
 
     private String name;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Customer owner;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "pet")
     private List<Appointment> appointments = new ArrayList<>();
 

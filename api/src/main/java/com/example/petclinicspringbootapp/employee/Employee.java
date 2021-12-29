@@ -2,6 +2,7 @@ package com.example.petclinicspringbootapp.employee;
 
 import com.example.petclinicspringbootapp.appointment.Appointment;
 import com.example.petclinicspringbootapp.user.AppUser;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -24,6 +25,7 @@ public class Employee {
 
     private String email;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "employee")
     private List<Appointment> appointments = new ArrayList<>();
 
@@ -31,6 +33,7 @@ public class Employee {
 
     private String description;
 
+    @JsonIgnore
     @OneToOne(fetch = FetchType.EAGER)
     private AppUser appUser;
 

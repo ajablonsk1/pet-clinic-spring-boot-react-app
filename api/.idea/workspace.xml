@@ -5,54 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046d11e8-5e86-4786-b746-569fdfce77fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/AppointmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/AppointmentCustomRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/AppointmentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/AppointmentRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/AppointmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/CustomerCustomRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/CustomerRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/CustomerRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/PetClinicApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/PetClinicApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/appointment/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/appointment/Appointment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/employee/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/employee/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/employee/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/employee/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/Pet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetRepoCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetRepoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetRepoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/pet/PetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/user/UserConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/user/UserConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/user/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/petclinicspringbootapp/user/UserRepo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/PetClinicApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/PetClinicApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/appointment/Appointment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/employee/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetRepoCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetCustomRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/pet/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/UserConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/UserConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/petclinicspringbootapp/user/AppUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -196,6 +181,7 @@
       <workItem from="1640293914725" duration="8673000" />
       <workItem from="1640682615131" duration="68000" />
       <workItem from="1640682700743" duration="9167000" />
+      <workItem from="1640781490487" duration="5550000" />
     </task>
     <servers />
   </component>

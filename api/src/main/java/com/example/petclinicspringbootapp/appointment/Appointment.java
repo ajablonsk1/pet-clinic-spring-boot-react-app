@@ -3,6 +3,7 @@ package com.example.petclinicspringbootapp.appointment;
 import com.example.petclinicspringbootapp.customer.Customer;
 import com.example.petclinicspringbootapp.employee.Employee;
 import com.example.petclinicspringbootapp.pet.Pet;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -20,14 +21,17 @@ public class Appointment {
 
     private Date date;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Customer customer;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "pet_id", referencedColumnName = "id")
     private Pet pet;
