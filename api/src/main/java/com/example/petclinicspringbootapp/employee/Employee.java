@@ -16,12 +16,13 @@ import java.util.List;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     private Long id;
 
     private String firstname;
 
     private String lastname;
+
+    private String rank;
 
     private String email;
 
@@ -99,5 +100,13 @@ public class Employee {
 
     public void setAppUser(AppUser appUser) {
         this.appUser = appUser;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 }

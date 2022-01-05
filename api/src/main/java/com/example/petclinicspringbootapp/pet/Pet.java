@@ -5,8 +5,6 @@ import com.example.petclinicspringbootapp.customer.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.springframework.lang.NonNull;
-import org.springframework.lang.NonNullApi;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -4,20 +4,20 @@ import { MdPets } from "react-icons/md";
 
 const Header = (props) => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar fixed="top" bg="light" expand="lg">
             <Container>
-                <Navbar.Brand><MdPets class="mb-1"/>{props.title}</Navbar.Brand>
+                <Navbar.Brand><MdPets className="mb-1"/>{props.title}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">{props.home}</Nav.Link>
-                        <Nav.Link href="#link">{props.empoyees}</Nav.Link>
-                        <Nav.Link href="#link">{props.about}</Nav.Link>
+                        <Nav.Link href="/">{props.home}</Nav.Link>
+                        <Nav.Link href="/employees">{props.empoyees}</Nav.Link>
+                        <Nav.Link href="/about">{props.about}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Collapse className="justify-content-end">
                     <Nav className="me">
-                        <Nav.Link href="#link">{props.login}</Nav.Link>
+                        <Nav.Link href="/login">{props.login}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

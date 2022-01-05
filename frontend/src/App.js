@@ -1,11 +1,23 @@
-import Header from  './components/home/Header.js'
-import EmployeeList from './components/employees/EmployeeList.js';
+import Header from './components/Header.js';
+import Home from './components/Home.js';
+import EmployeeList from './components/EmployeeList.js';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AboutUs from './components/AboutUs.js';
+import Login from './components/Login.js';
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-    </div>
+    <Router>
+      <div className='mt-5'>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/employees' element={<EmployeeList />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

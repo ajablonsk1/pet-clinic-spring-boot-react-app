@@ -44,11 +44,11 @@ public class AppConfig {
             Customer customer2 = new Customer(null, "Ronald", "Smith", "ronald@email.com",
                     new ArrayList<>(), new ArrayList<>(), customerUser2);
 
-            Employee employee1 = new Employee(null, "Carlos", "Smith", "carlos@email.com", new ArrayList<>(),
+            Employee employee1 = new Employee(null, "Carlos", "Smith","Veterinarian", "carlos@email.com", new ArrayList<>(),
                     "employees/employee1.png", "Lorem ipsum dolor sit amet, consectetur " +
                     "adipiscing elit. Morbi massa dolor, cursus et lectus hendrerit, finibus tempor purus. Etiam " +
                     "nec nunc sit amet ex bibendum tempus eget sit amet arcu.", employeeUser1);
-            Employee employee2 = new Employee(null, "Karen", "Smith", "karen@email.com", new ArrayList<>(),
+            Employee employee2 = new Employee(null, "Karen", "Smith", "Veterinary technician",  "karen@email.com", new ArrayList<>(),
                     "employees/employee2.png", "Lorem ipsum dolor sit amet, consectetur " +
                     "adipiscing elit. Morbi massa dolor, cursus et lectus hendrerit, finibus tempor purus. Etiam " +
                     "nec nunc sit amet ex bibendum tempus eget sit amet arcu.", employeeUser2);
