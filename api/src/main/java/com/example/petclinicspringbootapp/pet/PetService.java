@@ -25,7 +25,7 @@ public class PetService {
     }
 
     public List<Pet> getPetsByUser(AppUser user){
-        log.info("Fetching {} pets", user.getUsername());
+        log.info("Fetching {} pets", user.getEmail());
         return petRepo.findPetsByUser(user);
     }
 

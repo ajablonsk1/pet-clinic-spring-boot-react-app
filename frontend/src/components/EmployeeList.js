@@ -5,7 +5,7 @@ import image from '../assets/images/employee1.jpg'
 
 const EmployeeList = () => {
     const [employees, setEmployees] = useState([]);
-
+ 
     const fetchEmployees = () => {
         API.get('/employees')
             .then(res => {

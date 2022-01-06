@@ -14,12 +14,18 @@ import com.example.petclinicspringbootapp.user.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 @Configuration
 public class AppConfig {
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
     public CommandLineRunner commandLineRunner(UserService userService, PetService petService, EmployeeService employeeService,
@@ -29,10 +35,10 @@ public class AppConfig {
             Role employee = new Role(null, "ROLE_EMPLOYEE");
             Role admin = new Role(null, "ROLE_ADMIN");
 
-            AppUser customerUser1 = new AppUser(null, "customer1", "1234", new ArrayList<>());
-            AppUser customerUser2 = new AppUser(null, "customer2", "1234", new ArrayList<>());
-            AppUser employeeUser1 = new AppUser(null, "employee1", "1234", new ArrayList<>());
-            AppUser employeeUser2 = new AppUser(null, "employee2", "1234", new ArrayList<>());
+            AppUser customerUser1 = new AppUser(null, "customer1@gmail.com", "1234", new ArrayList<>());
+            AppUser customerUser2 = new AppUser(null, "customer2@gmail.com", "1234", new ArrayList<>());
+            AppUser employeeUser1 = new AppUser(null, "employee1@gmail.com", "1234", new ArrayList<>());
+            AppUser employeeUser2 = new AppUser(null, "employee2@gmail.com", "1234", new ArrayList<>());
             AppUser admin1 = new AppUser(null, "admin", "1234", new ArrayList<>());
 
             Pet pet1 = new Pet(null, "Pet1", null, new ArrayList<>(), "/pets/pet1.png");
@@ -63,11 +69,11 @@ public class AppConfig {
             userService.saveUser(employeeUser2);
             userService.saveUser(admin1);
 
-            userService.addRoleToUser(customerUser1.getUsername(), customer.getName());
-            userService.addRoleToUser(customerUser1.getUsername(), customer.getName());
-            userService.addRoleToUser(employeeUser1.getUsername(), employee.getName());
-            userService.addRoleToUser(employeeUser2.getUsername(), employee.getName());
-            userService.addRoleToUser(admin1.getUsername(), admin.getName());
+            userService.addRoleToUser(customerUser1.getEmail(), customer.getName());
+            userService.addRoleToUser(customerUser2.getEmail(), customer.getName());
+            userService.addRoleToUser(employeeUser1.getEmail(), employee.getName());
+            userService.addRoleToUser(employeeUser2.getEmail(), employee.getName());
+            userService.addRoleToUser(admin1.getEmail(), admin.getName());
 
             petService.savePet(pet1);
             petService.savePet(pet2);
@@ -89,10 +95,10 @@ public class AppConfig {
             employeeService.saveEmployee(employee1);
             employeeService.saveEmployee(employee2);
 
-            String pattern = "EEE, d MMM yyyy HH:mm";
-            String date1 = "Mon, 24 Jan 2022 14:00";
-            String date2 = "Wed, 16 Feb 2022 12:00";
-            String date3 = "Tue, 4 Jan 2022 13:00";
+            String pattern = "dd/MM/YYYY HH:mm";
+            String date1 = "24/01/2022 14:00";
+            String date2 = "16/02/2022 12:00";
+            String date3 = "04/01/2022 13:00";
 
             Appointment appointment1 = new Appointment(null, new SimpleDateFormat(pattern).parse(date1),
                     employee1, customer1, pet1);
