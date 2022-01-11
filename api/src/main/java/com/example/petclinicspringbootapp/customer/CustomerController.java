@@ -19,7 +19,7 @@ public class CustomerController {
         return ResponseEntity.ok().body(customerService.getCustomers());
     }
 
-    @PostMapping("customer/save")
+    @PostMapping("/customer/save")
     public ResponseEntity<Customer> saveCustomer(@RequestBody Customer customer){
         return ResponseEntity.ok().body(customerService.saveCustomer(customer));
     }

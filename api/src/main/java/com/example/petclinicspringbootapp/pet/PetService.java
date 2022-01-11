@@ -3,8 +3,10 @@ package com.example.petclinicspringbootapp.pet;
 import com.example.petclinicspringbootapp.customer.Customer;
 import com.example.petclinicspringbootapp.customer.CustomerRepo;
 import com.example.petclinicspringbootapp.user.AppUser;
+import com.example.petclinicspringbootapp.user.UserRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -18,13 +20,21 @@ import java.util.Optional;
 public class PetService {
     private final PetRepo petRepo;
     private final CustomerRepo customerRepo;
+    private final UserRepo userRepo;
 
     public Pet savePet(Pet pet){
         log.info("Saving new pet {} to the database", pet.getName());
         return petRepo.save(pet);
     }
 
-    public List<Pet> getPetsByUser(AppUser user){
+    public List<Pet> getPetsByUserEmail(String email){
+        AppUser user;
+        if(userRepo.findByEmail(email).isPresent()){
+            user = userRepo.findByEmail(email).get();
+        }
+        else{
+            throw new UsernameNotFoundException("User with given email doesn't exists");
+        }
         log.info("Fetching {} pets", user.getEmail());
         return petRepo.findPetsByUser(user);
     }

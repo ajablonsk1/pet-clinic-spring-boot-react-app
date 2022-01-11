@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import API from './Api.js';
+import API from './util/Api.js';
 import { Card } from 'react-bootstrap';
 import image from '../assets/images/employee1.jpg'
+import authHeader from './util/AuthHeader';
 
 const EmployeeList = () => {
     const [employees, setEmployees] = useState([]);
  
     const fetchEmployees = () => {
-        API.get('/employees')
+
+
+        API.get('api/employees', {headers :authHeader()})
             .then(res => {
                 setEmployees(res.data);
             }).catch(error => {

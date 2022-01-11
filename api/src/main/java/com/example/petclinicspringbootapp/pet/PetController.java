@@ -3,10 +3,7 @@ package com.example.petclinicspringbootapp.pet;
 import com.example.petclinicspringbootapp.user.AppUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,8 +18,8 @@ public class PetController {
     }
 
     @GetMapping("/pets/user")
-    ResponseEntity<List<Pet>> getPetsByUser(@RequestBody AppUser user){
-        return ResponseEntity.ok().body(petService.getPetsByUser(user));
+    ResponseEntity<List<Pet>> getPetsByUser(@RequestParam String email){
+        return ResponseEntity.ok().body(petService.getPetsByUserEmail(email));
     }
 
     @PostMapping("/pets/save")

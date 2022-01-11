@@ -39,18 +39,18 @@ public class AppConfig {
             AppUser customerUser2 = new AppUser(null, "customer2@gmail.com", "1234", new ArrayList<>());
             AppUser employeeUser1 = new AppUser(null, "employee1@gmail.com", "1234", new ArrayList<>());
             AppUser employeeUser2 = new AppUser(null, "employee2@gmail.com", "1234", new ArrayList<>());
-            AppUser admin1 = new AppUser(null, "admin", "1234", new ArrayList<>());
+            AppUser admin1 = new AppUser(null, "admin@gmail.com", "1234", new ArrayList<>());
 
             Pet pet1 = new Pet(null, "Pet1", null, new ArrayList<>(), "/pets/pet1.png");
             Pet pet2 = new Pet(null, "Pet2", null, new ArrayList<>(), "/pets/pet2.png");
             Pet pet3 = new Pet(null, "Pet3", null, new ArrayList<>(), "/pets/pet3.png");
 
-            Customer customer1 = new Customer(null, "Bob", "Smith", "bob@email.com",
+            Customer customer1 = new Customer(null, "Bob", "Smith", "111222333", "customer1@gmail.com",
                     new ArrayList<>(), new ArrayList<>(), customerUser1);
-            Customer customer2 = new Customer(null, "Ronald", "Smith", "ronald@email.com",
+            Customer customer2 = new Customer(null, "Ronald", "Smith", "111222333", "ronald@email.com",
                     new ArrayList<>(), new ArrayList<>(), customerUser2);
 
-            Employee employee1 = new Employee(null, "Carlos", "Smith","Veterinarian", "carlos@email.com", new ArrayList<>(),
+            Employee employee1 = new Employee(null, "Carlos", "Smith","Veterinarian", "employee1@gmail.com", new ArrayList<>(),
                     "employees/employee1.png", "Lorem ipsum dolor sit amet, consectetur " +
                     "adipiscing elit. Morbi massa dolor, cursus et lectus hendrerit, finibus tempor purus. Etiam " +
                     "nec nunc sit amet ex bibendum tempus eget sit amet arcu.", employeeUser1);
@@ -74,6 +74,8 @@ public class AppConfig {
             userService.addRoleToUser(employeeUser1.getEmail(), employee.getName());
             userService.addRoleToUser(employeeUser2.getEmail(), employee.getName());
             userService.addRoleToUser(admin1.getEmail(), admin.getName());
+            userService.addRoleToUser(admin1.getEmail(), employee.getName());
+            userService.addRoleToUser(admin1.getEmail(), customer.getName());
 
             petService.savePet(pet1);
             petService.savePet(pet2);

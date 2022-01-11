@@ -1,5 +1,6 @@
 package com.example.petclinicspringbootapp.customer;
 
+import com.example.petclinicspringbootapp.appointment.Appointment;
 import com.example.petclinicspringbootapp.pet.Pet;
 import com.example.petclinicspringbootapp.pet.PetRepo;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +22,10 @@ public class CustomerService {
 
     public Customer saveCustomer(Customer customer){
         log.info("Saving new customer {} to the database", customer.getFirstname());
+        List<Appointment> appointments = new ArrayList<>();
+        List<Pet> pets = new ArrayList<>();
+        customer.setAppointments(appointments);
+        customer.setPets(pets);
         return customerRepo.save(customer);
     }
 

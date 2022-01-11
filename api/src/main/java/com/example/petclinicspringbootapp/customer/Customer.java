@@ -23,6 +23,8 @@ public class Customer {
 
     private String lastname;
 
+    private String phoneNumber;
+
     private String email;
 
     @JsonIgnore
@@ -91,5 +93,13 @@ public class Customer {
 
     public void setAppUser(AppUser appUser) {
         this.appUser = appUser;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

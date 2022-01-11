@@ -57,4 +57,12 @@ public class AppointmentService {
             appointment.get().setEmployee(employee.get());
         }
     }
+
+    public List<Appointment> getAppointmentsByCustomerEmail(String email){
+        return appointmentRepo.findByCustomerEmail(email);
+    }
+
+    public List<Appointment> getAppointmentsByEmployeeEmail(String email){
+        return appointmentRepo.findByEmployeeEmail(email);
+    }
 }
