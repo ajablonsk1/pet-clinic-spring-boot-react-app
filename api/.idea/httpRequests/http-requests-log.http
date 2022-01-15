@@ -1,3 +1,27 @@
+POST http://localhost:8080/registration
+
+###
+
+POST http://localhost:8080/registration
+
+###
+
+POST http://localhost:8080/registration
+
+###
+
+POST http://localhost:8080/registration
+
+###
+
+POST http://localhost:8080/registration
+
+###
+
+POST http://localhost:8080/registration
+
+###
+
 GET http://localhost:8080/pets/user
 Content-Type: application/json
 

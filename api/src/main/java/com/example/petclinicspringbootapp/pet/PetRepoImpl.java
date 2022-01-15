@@ -24,7 +24,7 @@ public class PetRepoImpl implements PetCustomRepo {
         List<Pet> pets = entityManager.createQuery("select a from Pet a", Pet.class)
                 .getResultList();
         pets = pets.stream()
-                .filter(pet -> pet.getOwner().getAppUser().getUsername().equals(user.getUsername()))
+                .filter(pet -> pet.getOwner().getAppUser().getEmail().equals(user.getEmail()))
                 .toList();
         return pets;
     }

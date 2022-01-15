@@ -5,11 +5,10 @@ import com.example.petclinicspringbootapp.customer.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.springframework.lang.NonNull;
-import org.springframework.lang.NonNullApi;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -22,6 +21,12 @@ public class Pet {
 
     private String name;
 
+    private String type;
+
+    private String gender;
+
+    private Date birthDay;
+
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
@@ -30,8 +35,6 @@ public class Pet {
     @JsonIgnore
     @OneToMany(mappedBy = "pet")
     private List<Appointment> appointments = new ArrayList<>();
-
-    private String imagePath;
 
     public List<Appointment> getAppointments() {
         return appointments;
@@ -65,11 +68,27 @@ public class Pet {
         this.owner = owner;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getType() {
+        return type;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Date getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Date birthDay) {
+        this.birthDay = birthDay;
     }
 }

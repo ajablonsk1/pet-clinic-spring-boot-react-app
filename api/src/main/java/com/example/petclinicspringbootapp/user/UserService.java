@@ -1,5 +1,8 @@
 package com.example.petclinicspringbootapp.user;
 
+import com.example.petclinicspringbootapp.util.MessageResponse;
+import org.springframework.http.ResponseEntity;
+
 import java.util.List;
 
 public interface UserService {
@@ -8,4 +11,5 @@ public interface UserService {
     void addRoleToUser(String username, String roleName);
     AppUser getUser(String username);
     List<AppUser> getUsers();
+    ResponseEntity<MessageResponse> singUpUser(AppUser appUser);
 }

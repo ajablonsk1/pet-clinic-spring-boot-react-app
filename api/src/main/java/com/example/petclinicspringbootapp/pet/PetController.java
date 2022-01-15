@@ -1,14 +1,12 @@
 package com.example.petclinicspringbootapp.pet;
 
-import com.example.petclinicspringbootapp.user.AppUser;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.List;
 
 @RestController
@@ -22,12 +20,24 @@ public class PetController {
     }
 
     @GetMapping("/pets/user")
-    ResponseEntity<List<Pet>> getPetsByUser(@RequestBody AppUser user){
-        return ResponseEntity.ok().body(petService.getPetsByUser(user));
+    ResponseEntity<List<Pet>> getPetsByUser(@RequestParam String email){
+        return ResponseEntity.ok().body(petService.getPetsByUserEmail(email));
     }
 
     @PostMapping("/pets/save")
-    ResponseEntity<Pet> savePet(Pet pet){
+    ResponseEntity<Pet> savePet(@RequestBody Pet pet){
         return ResponseEntity.ok().body(petService.savePet(pet));
     }
+
+    @PostMapping("/pets/save/owner")
+    ResponseEntity<?> addOwnerToPet(@RequestBody OwnerToPetForm ownerToPetForm){
+        return ResponseEntity.ok().body(petService.savePet(ownerToPetForm));
+    }
 }
+
+@Data
+class OwnerToPetForm{
+    private String email;
+    private Pet pet;
+}
+
