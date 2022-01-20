@@ -26,8 +26,7 @@ public class Pet {
     private String gender;
 
     private Date birthDay;
-
-    @JsonIgnore
+    
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Customer owner;

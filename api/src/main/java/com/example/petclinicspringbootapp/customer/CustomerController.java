@@ -28,4 +28,9 @@ public class CustomerController {
     public ResponseEntity<Customer> saveCustomer(@RequestBody Customer customer){
         return ResponseEntity.ok().body(customerService.saveCustomer(customer));
     }
+
+    @DeleteMapping("/customer")
+    public ResponseEntity<Integer> deleteCustomer(@RequestParam String email){
+        return ResponseEntity.ok().body(customerService.deleteCustomer(email));
+    }
 }

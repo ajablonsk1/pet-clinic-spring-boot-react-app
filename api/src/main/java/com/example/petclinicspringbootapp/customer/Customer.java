@@ -6,6 +6,7 @@ import com.example.petclinicspringbootapp.user.AppUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
 
 import javax.persistence.*;
 import java.util.ArrayList;

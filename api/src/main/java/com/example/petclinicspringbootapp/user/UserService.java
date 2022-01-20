@@ -4,6 +4,7 @@ import com.example.petclinicspringbootapp.util.MessageResponse;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserService {
     AppUser saveUser(AppUser user);
@@ -12,4 +13,7 @@ public interface UserService {
     AppUser getUser(String username);
     List<AppUser> getUsers();
     ResponseEntity<MessageResponse> singUpUser(AppUser appUser);
+    Map<String, List<Role>> getRoles();
+
+    Integer deleteUser(String email);
 }

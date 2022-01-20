@@ -1,5 +1,9 @@
 package com.example.petclinicspringbootapp.user;
 
+import com.example.petclinicspringbootapp.customer.Customer;
+import com.example.petclinicspringbootapp.customer.CustomerRepo;
+import com.example.petclinicspringbootapp.employee.Employee;
+import com.example.petclinicspringbootapp.employee.EmployeeRepo;
 import com.example.petclinicspringbootapp.user.security.UserDetailsImpl;
 import com.example.petclinicspringbootapp.util.MessageResponse;
 import lombok.RequiredArgsConstructor;
@@ -14,9 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @Transactional
@@ -25,6 +27,8 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService, UserDetailsService {
     private final UserRepo userRepo;
     private final RoleRepo roleRepo;
+    private final CustomerRepo customerRepo;
+    private final EmployeeRepo employeeRepo;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
@@ -86,5 +90,31 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userRepo.save(appUser);
 
         return ResponseEntity.ok().body(new MessageResponse("User registered successfully!"));
+    }
+
+    public Map<String, List<Role>> getRoles(){
+        log.info("Getting all roles!");
+        Map<String, List<Role>> roleMap = new HashMap<>();
+        userRepo.findAll().forEach(appUser -> roleMap.put(appUser.getEmail(), appUser.getRoles()));
+        return roleMap;
+    }
+
+    public Integer deleteUser(String email){
+        log.info("Deleting user {}", email);
+        Customer customer = customerRepo.findCustomerByEmail(email);
+        if(customer != null){
+            customer.setAppUser(null);
+        }
+        Employee employee = employeeRepo.findEmployeeByEmail(email);
+        if(employee != null){
+            employee.setAppUser(null);
+        }
+        Optional<AppUser> user = userRepo.findByEmail(email);
+        if(user.isPresent()){
+            return userRepo.deleteAppUserByEmail(email);
+        } else{
+            log.error("User with given email does not exist: {}", email);
+            throw new UsernameNotFoundException("User with given email does not exist!");
+        }
     }
 }

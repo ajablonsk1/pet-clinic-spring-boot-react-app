@@ -1,6 +1,7 @@
 package com.example.petclinicspringbootapp.pet;
 
 import com.example.petclinicspringbootapp.appointment.Appointment;
+import com.example.petclinicspringbootapp.appointment.AppointmentRepo;
 import com.example.petclinicspringbootapp.customer.Customer;
 import com.example.petclinicspringbootapp.customer.CustomerRepo;
 import com.example.petclinicspringbootapp.user.AppUser;
@@ -25,6 +26,7 @@ public class PetService {
     private final PetRepo petRepo;
     private final CustomerRepo customerRepo;
     private final UserRepo userRepo;
+    private final AppointmentRepo appointmentRepo;
 
     public Pet savePet(Pet pet){
         log.info("Saving new pet {} to the database", pet.getName());
@@ -72,5 +74,20 @@ public class PetService {
         if(pet.isPresent() && customer.isPresent()){
             pet.get().setOwner(customer.get());
         }
+    }
+
+    public Integer deletePet(Long id){
+        Pet pet = petRepo.getById(id);
+        appointmentRepo.findAll()
+                .stream()
+                .filter(appointment -> {
+                    if(appointment.getPet() != null){
+                        return appointment.getPet().equals(pet);
+                    } else{
+                        return false;
+                    }})
+                .forEach(appointment -> appointment.setPet(null));
+        customerRepo.findCustomerByPet(pet).getPets().remove(pet);
+        return petRepo.deletePetById(id);
     }
 }

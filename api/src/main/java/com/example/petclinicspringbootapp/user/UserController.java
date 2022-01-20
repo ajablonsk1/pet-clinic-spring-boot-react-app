@@ -54,6 +54,15 @@ public class UserController {
         return ResponseEntity.ok().body(this.userService.getUser(email));
     }
 
+    @GetMapping("/user/roles")
+    public ResponseEntity<Map<String, List<Role>>> getRoles(){
+        return ResponseEntity.ok().body(this.userService.getRoles());
+    }
+
+    @DeleteMapping("/user")
+    public ResponseEntity<Integer> deleteUser(@RequestParam String email){
+        return ResponseEntity.ok().body(this.userService.deleteUser(email));
+    }
 }
 
 @Data

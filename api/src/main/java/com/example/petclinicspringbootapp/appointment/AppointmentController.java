@@ -47,6 +47,11 @@ public class AppointmentController {
         Date date = new SimpleDateFormat(pattern).parse(currDate);
         return ResponseEntity.ok().body(appointmentService.getDates(date));
     }
+
+    @DeleteMapping("/appointment")
+    public ResponseEntity<Integer> deleteAppointment(Long id){
+        return ResponseEntity.ok().body(appointmentService.deleteAppointment(id));
+    }
 }
 
 @Data

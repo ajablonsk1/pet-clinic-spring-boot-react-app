@@ -100,4 +100,21 @@ public class AppointmentService {
                 .forEach(appointment -> dates.add(appointment.getDate()));
         return dates;
     }
+
+    public Integer deleteAppointment(Long id){
+        Appointment appointment = appointmentRepo.findAppointmentById(id);
+        customerRepo.findAll()
+                .stream()
+                .filter(customer -> customer.getAppointments().contains(appointment)).
+                forEach(customer -> customer.getAppointments().remove(appointment));
+        petRepo.findAll()
+                .stream()
+                .filter(pet -> pet.getAppointments().contains(appointment)).
+                forEach(pet -> pet.getAppointments().remove(appointment));
+        employeeRepo.findAll()
+                .stream()
+                .filter(employee -> employee.getAppointments().contains(appointment)).
+                forEach(employee -> employee.getAppointments().remove(appointment));
+        return appointmentRepo.deleteAppointmentById(id);
+    }
 }

@@ -52,14 +52,14 @@ public class AppConfig {
 
             Customer customer1 = new Customer(null, "Bob", "Smith", "111222333", "customer1@gmail.com",
                     new ArrayList<>(), new ArrayList<>(), customerUser1);
-            Customer customer2 = new Customer(null, "Ronald", "Smith", "111222333", "ronald@email.com",
+            Customer customer2 = new Customer(null, "Ronald", "Smith", "111222333", "customer2@gmail.com",
                     new ArrayList<>(), new ArrayList<>(), customerUser2);
 
             Employee employee1 = new Employee(null, "Carlos", "Smith","Veterinarian", "employee1@gmail.com", new ArrayList<>(),
                     "employees/employee1.png", "Lorem ipsum dolor sit amet, consectetur " +
                     "adipiscing elit. Morbi massa dolor, cursus et lectus hendrerit, finibus tempor purus. Etiam " +
                     "nec nunc sit amet ex bibendum tempus eget sit amet arcu.", employeeUser1);
-            Employee employee2 = new Employee(null, "Karen", "Smith", "Veterinary technician",  "karen@email.com", new ArrayList<>(),
+            Employee employee2 = new Employee(null, "Karen", "Smith", "Veterinary technician",  "employee2@gmail.com", new ArrayList<>(),
                     "employees/employee2.png", "Lorem ipsum dolor sit amet, consectetur " +
                     "adipiscing elit. Morbi massa dolor, cursus et lectus hendrerit, finibus tempor purus. Etiam " +
                     "nec nunc sit amet ex bibendum tempus eget sit amet arcu.", employeeUser2);

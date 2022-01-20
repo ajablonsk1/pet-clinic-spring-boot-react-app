@@ -21,17 +21,14 @@ public class Appointment {
 
     private Date date;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Customer customer;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "pet_id", referencedColumnName = "id")
     private Pet pet;

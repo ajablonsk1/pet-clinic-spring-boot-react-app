@@ -20,7 +20,6 @@ public class AppUser {
 
     private String password;
 
-    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles = new ArrayList<>();
 

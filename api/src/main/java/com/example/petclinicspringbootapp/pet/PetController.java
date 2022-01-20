@@ -33,6 +33,11 @@ public class PetController {
     ResponseEntity<?> addOwnerToPet(@RequestBody OwnerToPetForm ownerToPetForm){
         return ResponseEntity.ok().body(petService.savePet(ownerToPetForm));
     }
+
+    @DeleteMapping("/pet")
+    ResponseEntity<Integer> deletePet(@RequestParam Long id){
+        return ResponseEntity.ok().body(petService.deletePet(id));
+    }
 }
 
 @Data
