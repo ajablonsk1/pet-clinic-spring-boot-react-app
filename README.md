@@ -30,5 +30,26 @@ Admin can:
 * React library for JS
 
 ## Endpoints
-Here are some of the endpoints:
+Here are some of the endpoints examples:
+
+`/home`
+This is a home view if you are not logged in.
+
+![home](endpoints/home.png)
+
+`/appointments/customer`
+Here customer can see all his booked appointments.
+
+![home](endpoints/customer-appointment.png)
+
+`/appointments/book`
+Here customer can book an appointment.
+
+![home](endpoints/customer-book.png)
+
+`/appointments/customer`
+Here admin can see all employees in database and manage them.
+
+![home](endpoints/admin-employees.png)
+
 
