@@ -3,7 +3,7 @@
 ## Table of Contents
   - [Description](#description)
   - [Technologies](#technologies)
-  - [Endpoints](#endpoints)
+  - [Views](#views)
 
 ## Description
 Pet Clinic is full stack project made becouse of my own intentions. App is used to manage pet clinic by using a browser. There are 3 distinguishable roles - customer, employee and admin. 
@@ -29,8 +29,8 @@ Admin can:
 ### Front-end
 * React library for JS
 
-## Endpoints
-Here are some of the endpoints examples:
+## Views
+Here are some of the views:
 
 `/home`
 This is a home view if you are not logged in.
